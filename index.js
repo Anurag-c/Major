@@ -2,7 +2,9 @@ const express = require('express');
 const port = 8000;
 
 const app = express();
+const routes = require('./routes/index.js');
 
+app.use('/', routes);
 
 app.listen(port, function(err){
     if(err){
@@ -11,3 +13,4 @@ app.listen(port, function(err){
     }
     console.log("Server running succesfully at ", port);
 });
+
