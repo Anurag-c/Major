@@ -8,7 +8,6 @@ const passportLocal = require('./config/passport-local-strategy');
 const MongoStore = require('connect-mongo');
 
 app.use(express.urlencoded());
-app.use(express.static('assets'));
 
 app.set('view engine', 'ejs');
 app.set('views', './views');
@@ -33,6 +32,7 @@ app.use(passport.session());
 app.use(passport.setAuthenticatedUser);
 
 app.use('/', require('./routes/index.js'));
+app.use(express.static('assets'));
 
 app.listen(port, function(err){
     if(err){
