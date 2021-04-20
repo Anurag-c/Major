@@ -13,7 +13,12 @@
   "author": "Anurag Nampally",
   "license": "ISC",
   "dependencies": {
+    "connect-mongo": "^4.4.1",
     "ejs": "^3.1.6",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "mongoose": "^5.12.4",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0"
   }
 }
